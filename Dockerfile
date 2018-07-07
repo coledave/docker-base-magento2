@@ -47,5 +47,5 @@ RUN echo 'APT::Install-Recommends 0;' >> /etc/apt/apt.conf.d/01norecommends \
   && rm -rf /var/lib/apt/lists/*
 
 COPY root /
-
+  
 ENTRYPOINT ["/entrypoint.sh"]
