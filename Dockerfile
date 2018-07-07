@@ -46,5 +46,6 @@ RUN echo 'APT::Install-Recommends 0;' >> /etc/apt/apt.conf.d/01norecommends \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
+COPY root /
+
 ENTRYPOINT ["/entrypoint.sh"]
